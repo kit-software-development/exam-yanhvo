@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Client</name>
+    </assembly>
+    <members>
+        <member name="T:Client.Client">
+            Класс клиента
+            Содержит логику запуска клиента и элементы, необходимые для пользовательского интерфейса
+        </member>
+        <member name="P:Client.Client.MessagesBindingList">
+            Сообщения, отображаемые пользователю
+        </member>
+        <member name="P:Client.Client.ChatroomsBindingList">
+            Список чатов
+        </member>
+        <member name="P:Client.Client.UsersBindingList">
+            Список пользователей
+        </member>
+        <member name="P:Client.Client.MainForm">
+            Основной объект winform для вызова его потока и изменения его элементов
+        </member>
+        <member name="P:Client.Client.User">
+            Текущий пользователь
+        </member>
+        <member name="P:Client.Client.UserManager">
+            Локальный обьект UserManager 
+        </member>
+        <member name="P:Client.Client.ChatroomManager">
+            Локальный обьект ChatroomManager
+        </member>
+        <member name="P:Client.Client.Logged">
+            Определение, вошел ли текущий пользователь в систему
+        </member>
+        <member name="M:Client.Client.#ctor">
+            Конструктор клиента
+        </member>
+        <member name="M:Client.Client.run">
+            Запускается поток для проверки соединения и обработки данных, отправленных сервером
+            Затем поток, для выхода
+        </member>
+        <member name="M:Client.Client.checkData">
+            Проверка, есть ли сообщения, поступающие с сервера
+        </member>
+        <member name="M:Client.Client.checkQuit">
+            При отключенном сервере
+        </member>
+        <member name="M:Client.Client.processData(Chat.Net.Message)">
+            Разбор полученного сообщения
+        </member>
+        <member name="M:Client.Program.Main(System.String[])">
+            Точка входа клиента.
+            Вызывает первую WinForm, которая затем вызывает Client и так далее
+        </member>
+        <member name="T:Client.ThreadedBindingList`1">
+            Список двусторонней привязки данных для работы с потоками
+        </member>
+        <member name="T:Client.Views.AddChatroom">
+            <summary>
+            WinForm to add a chatroom
+            </summary>
+        </member>
+        <member name="M:Client.Views.AddChatroom.#ctor(Client.Client)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="clientParam">Get the client instance</param>
+        </member>
+        <member name="M:Client.Views.AddChatroom.createChatroomButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Action performed on Create chatroom button click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Client.Views.AddChatroom.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.Views.AddChatroom.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.Views.AddChatroom.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Client.Views.Chat">
+            <summary>
+            Main WinForm used to see, send and receive messages
+            We do a massive use of ThreadedBindingList because they support threads and
+            are a great way to do 2-way binding
+            </summary>
+        </member>
+        <member name="M:Client.Views.Chat.#ctor(Client.Client)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="clientParam">Client instance</param>
+        </member>
+        <member name="M:Client.Views.Chat.sendButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Action performed on "Send" button click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.Views.Chat.createChatroomButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Open the Add chatroom WinForm on click of "Create chatroom" button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.Views.Chat.chatrooms_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Action performed on chatroom change
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.Views.Chat.getUsers">
+            <summary>
+            Periodically check users (from a thread) connected to the current chatroom
+            </summary>
+        </member>
+        <member name="M:Client.Views.Chat.getChatrooms">
+            <summary>
+            Periodically check availables chatrooms (from a thread)
+            </summary>
+        </member>
+        <member name="M:Client.Views.Chat.getServer">
+            <summary>
+            Periodically check if the server is available
+            </summary>
+        </member>
+        <member name="M:Client.Views.Chat.messageTextBox_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Allow users to hit "Enter" to send a message instead of clicking "Send"
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.Views.Chat.Chat_Load(System.Object,System.EventArgs)">
+            <summary>
+            Action performed after the constructor: create the ThreadedBindingLists and start the 2 threads
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.Views.Chat.Chat_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            When we close the form, let the client know about it so it will close the thread gracefully
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Client.Views.Chat.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.Views.Chat.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.Views.Chat.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Client.Views.UserLogin">
+            <summary>
+            WinForm used to perform login
+            </summary>
+        </member>
+        <member name="M:Client.Views.UserLogin.#ctor(Client.Client)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="clientParam">Client instance</param>
+        </member>
+        <member name="M:Client.Views.UserLogin.loginButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Action perform on Login button click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.Views.UserLogin.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Action performed on Register button click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.Views.UserLogin.passwordTextBox_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Allow user to use "Enter" key to login
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Client.Views.UserLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.Views.UserLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.Views.UserLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Client.Views.Welcome.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.Views.Welcome.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.Views.Welcome.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

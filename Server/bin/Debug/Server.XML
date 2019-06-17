@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Server</name>
+    </assembly>
+    <members>
+        <member name="T:Server.Program">
+            Точка входа сервера, вызывающая WinForm, которая вызывает класс сервера
+        </member>
+        <member name="T:Server.Server">
+            Класс сервера
+        </member>
+        <member name="M:Server.Server.#ctor">
+            Загрузка пользователей и чатов, сохраненных в файле
+        </member>
+        <member name="M:Server.Server.run">
+            Запуск сервера запускает 3 потока:
+            Проверка сообщений, отправленных пользователями
+            Проверка, вышел ли клиент
+            Создание нового объекта TcpClient, если присоединяется новый клиент
+        </member>
+        <member name="M:Server.Server.listen">
+            Создание нового сеанса для каждого нового клиента с собственным экземпляром TcpClient
+        </member>
+        <member name="M:Server.Server.checkData">
+            Проверка данных, поступающих от клиентов
+        </member>
+        <member name="M:Server.Server.quitCr(Chat.Auth.Session,Chat.Net.Message)">
+            Проверка покинул ли клиент чат
+        </member>
+        <member name="M:Server.Server.processData(Chat.Auth.Session,Chat.Net.Message)">
+            Обработка данных, отправленных клиентами
+        </member>
+        <member name="M:Server.Server.checkQuit">
+            Проверка ушел ли пользователь
+        </member>
+        <member name="M:Server.Server.broadcastToChatRoom(Chat.Auth.Session,System.String)">
+            Функция отправки сообщений всем пользователям чата
+        </member>
+        <member name="T:Server.Views.ServerGUI">
+            <summary>
+            Server's WinForm
+            </summary>
+        </member>
+        <member name="M:Server.Views.ServerGUI.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handle the "Start/Stop server" bitton click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Server.Views.ServerGUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Server.Views.ServerGUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Server.Views.ServerGUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Server.Views.TextBoxStreamWriter">
+            <summary>
+            Class used to write Console output to a WinForm
+            Source: https://saezndaree.wordpress.com/2009/03/29/how-to-redirect-the-consoles-output-to-a-textbox-in-c/
+            </summary>
+        </member>
+    </members>
+</doc>

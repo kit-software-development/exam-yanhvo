@@ -1,0 +1,27 @@
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Server.exe.config
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Server.XML
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Server.exe
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Server.pdb
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Chat.dll
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Chat.pdb
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Chat.xml
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\bin\Debug\Chat.dll.config
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\obj\Debug\Server.Views.ServerGUI.resources
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\obj\Debug\Server.exe
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Server\obj\Debug\Server.pdb
+C:\Users\Yana\Desktop\chat-gui\Server\bin\Debug\Server.exe.config
+C:\Users\Yana\Desktop\chat-gui\Server\bin\Debug\Server.XML
+C:\Users\Yana\Desktop\chat-gui\Server\obj\Debug\Server.exe
+C:\Users\Yana\Desktop\chat-gui\Server\obj\Debug\Server.pdb
+C:\Users\Yana\Desktop\chat-gui\Server\bin\Debug\Server.exe
+C:\Users\Yana\Desktop\chat-gui\Server\bin\Debug\Server.pdb
+C:\Users\Yana\Desktop\chat-gui\Server\bin\Debug\Chat.dll
+C:\Users\Yana\Desktop\chat-gui\Server\bin\Debug\Chat.pdb
+C:\Users\Yana\Desktop\chat-gui\Server\bin\Debug\Chat.xml
+C:\Users\Yana\Desktop\chat-gui\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Yana\Desktop\chat-gui\Server\obj\Debug\Server.Views.ServerGUI.resources
+C:\Users\Yana\Desktop\chat-gui\Server\obj\Debug\Server.csproj.GenerateResource.Cache

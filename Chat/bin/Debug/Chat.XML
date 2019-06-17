@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chat</name>
+    </assembly>
+    <members>
+        <member name="T:Chat.Auth.UserManager">
+            Обработка пользователей
+        </member>
+        <member name="P:Chat.Auth.UserManager.UserList">
+            Хранение пользователей в списке
+        </member>
+        <member name="M:Chat.Auth.UserManager.addUser(System.String,System.String)">
+            Добавление пользователя в список. Проверка, что он уже не существует с данным логином.
+        </member>
+        <member name="M:Chat.Auth.UserManager.removeUser(System.String)">
+            Удаление пользователя из списка на основе его логина
+        </member>
+        <member name="M:Chat.Auth.UserManager.getUser(Chat.Auth.User)">
+            Поиск пользователя в списке
+        </member>
+        <member name="M:Chat.Auth.UserManager.authentify(System.String,System.String)">
+            Аутентификация пользователя на основе его пароля.
+        </member>
+        <member name="M:Chat.Auth.UserManager.load(System.String)">
+            Загрузка пользователей из файла
+        </member>
+        <member name="M:Chat.Auth.UserManager.save(System.String)">
+            Сохранение текущего списока в файл.
+        </member>
+        <member name="T:Chat.Auth.SessionManager">
+            Обработка сеансов
+        </member>
+        <member name="P:Chat.Auth.SessionManager.SessionList">
+            Все сеансы хранятся в списке
+        </member>
+        <member name="M:Chat.Auth.SessionManager.addSession(Chat.Auth.Session)">
+            Добавление нового сеанса. Проверка, что он еще не сохранен с данным идентификатором
+        </member>
+        <member name="M:Chat.Auth.SessionManager.removeSession(System.Guid)">
+            Удаление сеанса с помощью маркера
+        </member>
+        <member name="T:Chat.Auth.Session">
+            Создание сеанса для каждого пользователя
+        </member>
+        <member name="P:Chat.Auth.Session.Token">
+            Каждый сеанс имеет уникальный идентификатор 
+        </member>
+        <member name="T:Chat.Auth.User">
+            Обработка пользователя
+        </member>
+        <member name="T:Chat.Chat.Chatroom">
+            Описание чата
+        </member>
+        <member name="M:Chat.Chat.Chatroom.ToString">
+            Удобное отображение чата для списка
+        </member>
+        <member name="T:Chat.Chat.ChatroomManager">
+            Обработка всех чатов
+        </member>
+        <member name="P:Chat.Chat.ChatroomManager.ChatroomList">
+            Создание списка всех чатов
+        </member>
+        <member name="M:Chat.Chat.ChatroomManager.addChatroom(Chat.Chat.Chatroom)">
+            Добавление чата, если его еще нет в спике
+        </member>
+        <member name="M:Chat.Chat.ChatroomManager.removeChatroom(System.String)">
+            Удаление чата, основываясь на его имени
+        </member>
+        <member name="M:Chat.Chat.ChatroomManager.load(System.String)">
+            Загрузка чатов, хранящихся в файле
+        </member>
+        <member name="M:Chat.Chat.ChatroomManager.save(System.String)">
+            Сохранение текущих чатов в файл
+        </member>
+        <member name="T:Chat.Net.Message">
+            Хранение сообщения
+            Каждое сообщение состоит из заголовка, который описывает его (регистрация пользователя, присоединение к чату, выход из чата, публикация сообщения и т. д)
+            Затем его содержимое сохраняется в списке строк
+        </member>
+        <member name="M:Chat.Net.Message.addData(System.String)">
+            Добавление данных в список сообщений
+        </member>
+        <member name="T:Chat.Net.TCPClient">
+            Каждый клиент имеет экземпляр TCPClient, который содержит объект TcpClient
+            а также IPAddress, порт сервера и логическое значение, используемое для определения момента выхода
+        </member>
+        <member name="M:Chat.Net.TCPClient.connect">
+            Подключение к серверу
+        </member>
+        <member name="M:Chat.Net.TCPClient.getMessage">
+            Получение сообщения с сервера.
+            Десериализация полученного сообщения и возврат его
+        </member>
+        <member name="M:Chat.Net.TCPClient.sendMessage(Chat.Net.Message)">
+            Отправка сообщения не сервер
+        </member>
+        <member name="T:Chat.Net.TCPServer">
+            TCPServer
+        </member>
+        <member name="M:Chat.Net.TCPServer.startServer(System.Int32)">
+            Запуск сервера
+        </member>
+        <member name="M:Chat.Net.TCPServer.stopServer">
+            Остановка сервера
+        </member>
+        <member name="M:Chat.Net.TCPServer.getMessage(System.Net.Sockets.Socket)">
+            Получение объекта сообщения от данного клиента
+        </member>
+        <member name="M:Chat.Net.TCPServer.sendMessage(Chat.Net.Message,System.Net.Sockets.Socket)">
+            Отправка сообщения данному клиенту
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\bin\Debug\Chat.dll.config
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\bin\Debug\Chat.XML
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\bin\Debug\Chat.dll
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\bin\Debug\Chat.pdb
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\obj\Debug\Chat.csproj.CoreCompileInputs.cache
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\obj\Debug\Chat.dll
+C:\Users\natal\Desktop\Отчеты по курсовому проекту от БОГА\chat-gui\Chat\obj\Debug\Chat.pdb
+C:\Users\Yana\Desktop\chat-gui\Chat\bin\Debug\Chat.dll.config
+C:\Users\Yana\Desktop\chat-gui\Chat\bin\Debug\Chat.XML
+C:\Users\Yana\Desktop\chat-gui\Chat\bin\Debug\Chat.dll
+C:\Users\Yana\Desktop\chat-gui\Chat\bin\Debug\Chat.pdb
+C:\Users\Yana\Desktop\chat-gui\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
+C:\Users\Yana\Desktop\chat-gui\Chat\obj\Debug\Chat.dll
+C:\Users\Yana\Desktop\chat-gui\Chat\obj\Debug\Chat.pdb
