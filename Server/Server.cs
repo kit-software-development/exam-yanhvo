@@ -261,7 +261,7 @@ namespace Server
 
                             Console.WriteLine("- " + session.User.Login + " : chatroom has been created: " + messageList[0]);
                         }
-                        catch (ChatroomAlreadyExistsException e)
+                        catch (Exceptions e)
                         {
                             // Предупреждение пользователя, что чат не создан
                             Message messageError = new Message(Message.Header.CREATE_CR);

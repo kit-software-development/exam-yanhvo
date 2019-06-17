@@ -41,7 +41,7 @@ namespace Chat.Chat
             {
                 if (chatroom.Name == other.Name)
                 {
-                    throw new ChatroomAlreadyExistsException(chatroom.Name);
+                    throw new Exceptions.Exceptions(chatroom.Name);
                 }
             }
 

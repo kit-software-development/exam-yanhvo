@@ -13,3 +13,10 @@ C:\Users\Yana\Desktop\chat-gui\Chat\bin\Debug\Chat.pdb
 C:\Users\Yana\Desktop\chat-gui\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
 C:\Users\Yana\Desktop\chat-gui\Chat\obj\Debug\Chat.dll
 C:\Users\Yana\Desktop\chat-gui\Chat\obj\Debug\Chat.pdb
+C:\Users\Yana\Desktop\Chat-yanhvo\Chat\bin\Debug\Chat.dll.config
+C:\Users\Yana\Desktop\Chat-yanhvo\Chat\bin\Debug\Chat.XML
+C:\Users\Yana\Desktop\Chat-yanhvo\Chat\bin\Debug\Chat.dll
+C:\Users\Yana\Desktop\Chat-yanhvo\Chat\bin\Debug\Chat.pdb
+C:\Users\Yana\Desktop\Chat-yanhvo\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
+C:\Users\Yana\Desktop\Chat-yanhvo\Chat\obj\Debug\Chat.dll
+C:\Users\Yana\Desktop\Chat-yanhvo\Chat\obj\Debug\Chat.pdb
